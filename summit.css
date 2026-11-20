@@ -151,19 +151,3 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 }
 @media(max-width:375px){:root{--gutter:19px}.footer-content{gap:15px}.footer-links{font-size:.82rem}.hero-ctas{gap:8px}.hero .eyebrow{letter-spacing:.11em}.hero h1{font-size:3.55rem}}
 @media(prefers-reduced-motion:reduce){.hero-bg,.home-project img{transform:none!important}}
-
-/* Home: the approach gallery stays visible independently of scroll reveals. */
-#summit-line-approach{scroll-margin-top:80px}
-.approach-slider{margin:0;inline-size:100%;min-inline-size:0;overflow:hidden;border-radius:9px;background:var(--coal);color:var(--cream);box-shadow:12px 12px 0 #d6c6b3}
-.approach-frame{position:relative;inline-size:100%;aspect-ratio:4/3;overflow:hidden}
-.approach-slide{display:block;position:absolute;inset:0;inline-size:100%;block-size:100%;object-fit:cover;opacity:0;transform:translateX(2.5%);transition:opacity .42s ease,transform .42s ease}
-.approach-slide.is-current{z-index:1;opacity:1;transform:translateX(0)}
-.approach-bar{min-block-size:54px;padding:7px 11px 7px 15px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:2px solid var(--orange)}
-.approach-caption{font:750 .76rem/1.25 ui-monospace,monospace;color:#f5e8da}
-.approach-controls{flex:none;display:flex;align-items:center;gap:4px}
-.approach-controls button{min-inline-size:32px;min-block-size:36px;padding:0 4px;border:1px solid #ffffff52;border-radius:4px;background:transparent;color:#fff8ef;font-weight:800;font-size:.85rem}
-.approach-controls button:hover{color:var(--coal);background:var(--orange)}
-.approach-controls button:focus-visible{outline-color:#ffab72;outline-offset:1px}
-.approach-count{font:.73rem/1 ui-monospace,monospace;min-inline-size:39px;text-align:center}
-@media(max-width:767px){.approach-frame{aspect-ratio:5/4}.approach-slider{box-shadow:7px 7px 0 #d6c6b3}.approach-controls button{min-inline-size:35px;min-block-size:44px}}
-@media(prefers-reduced-motion:reduce){.approach-slide{transition:none!important;transform:none!important}}
