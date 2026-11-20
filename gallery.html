@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#11191e">
+  <meta name="description" content="Explore Summit Line’s project photos from work at height on buildings, roofs and industrial structures.">
+  <title>Project Gallery | Summit Line Rope Access</title>
+  <link rel="canonical" href="https://summitlineropeaccess.vercel.app/gallery.html">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:site_name" content="Summit Line Rope Access">
+  <meta property="og:title" content="Project Gallery | Summit Line Rope Access">
+  <meta property="og:description" content="Explore Summit Line’s project photos from work at height on buildings, roofs and industrial structures.">
+  <meta property="og:url" content="https://summitlineropeaccess.vercel.app/gallery.html">
+  <meta property="og:image" content="https://summitlineropeaccess.vercel.app/assets/glass-facade.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="premium.css">
+  <link rel="stylesheet" href="summit.css">
+  <script src="site-config.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="premium.js" defer></script>
+  <script src="chatbot.js" defer></script>
+  <script src="pwa.js" defer></script>
+</head>
+<body data-page="gallery">
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="header">
+  <a class="brand" href="./" aria-label="Summit Line Rope Access home"><img src="assets/logo.webp" width="50" height="50" alt=""><span>SUMMIT LINE<small>ROPE ACCESS</small></span></a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-controls="primaryNav" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+  <nav id="primaryNav" aria-label="Main navigation"><a href="./">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html" aria-current="page">Gallery</a><a href="faq.html">FAQ</a><a href="safety.html">Safety</a><a href="contact.html">Contact</a></nav>
+  <button class="btn header-quote" type="button" data-open-quote>Request a quote <span aria-hidden="true">↗</span></button>
+</header>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<main id="main"><section class="inner-hero" style="--inner-image:url('assets/glass-facade.webp');--inner-position:53% 37%"><div class="inner-content"><span class="kicker">03 / GALLERY</span><h1 class="typewriter" data-text="Work at height, in focus.">Work at height, in focus.</h1><p>Get a closer look at the buildings, roofs and industrial structures shown in our project photography.</p></div></section>
+ <section class="section gallery-section"><div class="section-head reveal slide-up"><span class="kicker">PROJECT PHOTOGRAPHY</span><h2 class="typewriter reveal-title" data-text="Explore by work environment">Explore by work environment</h2><p>Choose a category or open a photo to see more detail.</p></div><div id="projectFilters" class="project-filters" role="group" aria-label="Filter projects"></div><div class="project-grid" id="projectList"></div><noscript><div class="home-projects"><figure class="feature-visual photo-visual"><img src="assets/city-access.webp" alt="A technician working on a building edge with the city skyline below." loading="lazy" decoding="async" style="object-position:25% 47%"></figure><figure class="feature-visual photo-visual"><img src="assets/glass-facade.webp" alt="Technicians suspended across a glazed multi-storey façade." loading="lazy" decoding="async" style="object-position:50% 39%"></figure><figure class="feature-visual photo-visual"><img src="assets/painted-roof.webp" alt="A technician equipped with a harness and paint bucket on a sloped roof." loading="lazy" decoding="async" style="object-position:47% 38%"></figure></div></noscript></section>
+ <section class="section premium-compare-section"><div class="section-head reveal slide-up"><span class="kicker">ACCESS IN CONTEXT</span><h2 class="typewriter reveal-title" data-text="From glazed façades to sloping roofs">From glazed façades to sloping roofs</h2></div><div class="compare-card"><h3 id="compareTitle">Two ways we work at height</h3><div class="before-after" id="beforeAfter"><img id="beforeImage" alt="" loading="lazy"><img id="afterImage" alt="" loading="lazy"><span class="compare-label before-label">Façade access</span><span class="compare-label after-label">Roof access</span><span class="compare-divider" aria-hidden="true"></span></div><div class="compare-input"><label for="compareRange">Slide to compare the work environments</label><input id="compareRange" type="range" min="0" max="100" value="50"><span id="compareValue">50% façade view</span></div><p id="compareCaption"></p></div></section>
+ <dialog class="project-dialog" id="projectDialog" aria-labelledby="projectDialogTitle"><div class="project-dialog-top"><h2 id="projectDialogTitle">Project photo</h2><button id="projectDialogClose" type="button" aria-label="Close project photo">×</button></div><img id="projectFullImage" alt=""><p id="projectDialogDescription"></p><div class="project-dialog-actions"><button id="projectPrev" type="button" aria-label="Previous photo">← Previous</button><button id="projectNext" type="button" aria-label="Next photo">Next →</button></div></dialog>
+ <section class="section cta-band"><div><span class="kicker">PLAN YOUR PROJECT</span><h2 class="">Have a similar job in mind?</h2><p>Tell us about the site and what needs doing.</p></div><button class="btn" type="button" data-open-quote>Request a quote <span aria-hidden="true">↗</span></button></section></main>
+<footer class="site-footer"><div class="footer-content"><div class="footer-main"><a class="brand footer-brand" href="./"><img src="assets/logo.webp" width="52" height="52" alt=""><span>SUMMIT LINE<small>ROPE ACCESS</small></span></a><p>Rope access for construction and maintenance work at height.</p></div><div class="footer-links"><b>EXPLORE</b><a href="services.html">Services</a><a href="gallery.html">Project gallery</a><a href="safety.html">Safety & approach</a><button type="button" data-install>Install the app ↗</button></div><div class="footer-links"><b>GET IN TOUCH</b><a href="tel:+27832431433">+27 83 243 1433</a><a href="mailto:info@summitlineropeaccess.co.za">info@summitlineropeaccess.co.za</a><a href="https://wa.me/27832431433" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div><div class="footer-bottom">© <span id="year">2026</span> Summit Line Rope Access. <span>Designed by <a href="https://webdevpro.co.za" target="_blank" rel="noopener noreferrer">WebDevPro</a>.</span></div></footer>
+<nav class="mobile-bottom mobile-bottom-pro" aria-label="Mobile quick navigation">
+    <a class="mobile-nav-item" href="./"><span class="mobile-nav-icon-wrap"><svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7"/><path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M9 21v-7h6v7"/></svg></span><span class="mobile-nav-label">Home</span></a>
+    <a class="mobile-nav-item" href="services.html"><span class="mobile-nav-icon-wrap"><svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><path d="M17.5 14v7m-3.5-3.5h7"/></svg></span><span class="mobile-nav-label">Services</span></a>
+    <button class="mobile-nav-item mobile-nav-chat" type="button" data-open-chat aria-controls="chatPanel" aria-label="Open 24/7 assistance"><span class="mobile-nav-icon-wrap mobile-nav-chat-icon"><svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-8.6 8.3 9.5 9.5 0 0 1-4.2-.9L3 21l1.7-4.7A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M8.1 10.2h7.8M8.1 13.8h5.2"/></svg><span class="mobile-nav-live" aria-hidden="true"></span></span><span class="mobile-nav-label">Chat</span></button>
+    <a class="mobile-nav-item" href="contact.html"><span class="mobile-nav-icon-wrap"><svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.6"/><path d="m4 7 8 6 8-6"/></svg></span><span class="mobile-nav-label">Contact</span></a>
+    <button class="mobile-nav-item" id="installHelp" type="button" aria-label="Install this website as an app"><span class="mobile-nav-icon-wrap"><svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.3"/><path d="M12 7v7m-3-3 3 3 3-3"/><path d="M10 18h4"/></svg></span><span class="mobile-nav-label">Install</span></button>
+  </nav>
+  <dialog id="installDialog" aria-labelledby="installTitle">
+    <h2 id="installTitle">Install this website</h2>
+    <p>Add Summit Line to your home screen. On iPhone, open this website in Safari and choose Share → Add to Home Screen.</p>
+    <p id="installStatus" role="status"></p>
+    <button id="installNow" type="button" hidden>Install app</button>
+    <button id="closeDialog" type="button">Close</button>
+  </dialog>
+  <button id="chatLauncher" class="chat-launcher" type="button" aria-controls="chatPanel" aria-expanded="false" aria-haspopup="dialog" aria-label="Open 24/7 enquiry assistant">
+    <svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4.3-1L3 21l1.6-5A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 11h8M8 14h5"/></svg>
+    <span class="chat-launcher-label">24/7 Assistance</span>
+  </button>
+  <section id="chatPanel" class="chat-panel" role="dialog" aria-modal="false" aria-label="24/7 automated enquiry assistant" hidden>
+    <div class="chat-top"><div class="chat-avatar" aria-hidden="true">✦</div><div class="chat-heading"><strong id="chatCompany">Summit Line Rope Access</strong><span><i class="online-dot" aria-hidden="true"></i> 24/7 automated assistance</span></div><button id="chatClose" class="chat-close" type="button" aria-label="Close enquiry assistant">×</button></div>
+    <div class="chat-progress" id="chatProgress" aria-live="polite">Welcome</div>
+    <div id="chatTranscript" class="chat-transcript" aria-live="polite" aria-relevant="additions text"></div>
+    <div class="chat-compose"><div id="chatControls"></div><p id="chatStatus" class="chat-status" role="status" hidden></p><p class="chat-footnote">Review your message, then confirm sending it in WhatsApp.</p></div>
+  </section>
+</body>
+</html>

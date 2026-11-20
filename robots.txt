@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://summitlineropeaccess.vercel.app/sitemap.xml
