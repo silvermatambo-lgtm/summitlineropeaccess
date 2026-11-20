@@ -1,6 +1,6 @@
 /* Ultra Max 7 Pro Premium — change CACHE_VERSION when deploying a new client version.
    Same-origin static assets are cached; enquiries and external sites are NOT cached. */
-const CACHE_VERSION = 'summit-rope-access-v1';
+const CACHE_VERSION = 'summit-rope-access-v2';
 const APP_CACHE = `${CACHE_VERSION}-static`;
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSETS = [

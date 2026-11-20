@@ -17,7 +17,7 @@
   if (hero) {
     const slides = $('.hero-bg'); let index = 0; let timer = null; let paused = reduced;
     const label = $('#slideStatus'); const caption = $('#slideCaption'); const pause = $('#pauseSlide');
-    const updatePause = () => { if(!pause)return; const name=paused?'Play slideshow':'Pause slideshow'; pause.textContent=paused?'▶':'Ⅱ'; pause.setAttribute('aria-label',name); pause.title=name; };
+    const updatePause = () => { if(!pause)return; const name=paused?'Play slideshow':'Pause slideshow'; pause.textContent=paused?'>':'II'; pause.setAttribute('aria-label',name); pause.title=name; };
     const slideTo = n => {
       index = (n + slides.length) % slides.length;
       slides.forEach((s, i) => { if(i===index && s.dataset.src && !s.hasAttribute('src')) s.src=s.dataset.src; s.classList.toggle('active', i === index); });

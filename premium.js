@@ -73,7 +73,7 @@
       const s=services[index]; content.replaceChildren();
       const kicker=mk('span','kicker','EXPLORE OUR SERVICES');const h=mk('h3','',s.name);const p=mk('p','',s.detail);
       const ul=mk('ul','service-benefits');(s.points||[]).forEach(pt=>ul.append(mk('li','',pt)));
-      const actions=mk('div','explorer-actions');const chat=mk('button','btn','Ask about this service ↗');chat.type='button';chat.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('ultramax:service',{detail:{service:s.name}})));
+      const actions=mk('div','explorer-actions');const chat=mk('button','btn','Ask about this service →');chat.type='button';chat.addEventListener('click',()=>window.dispatchEvent(new CustomEvent('ultramax:service',{detail:{service:s.name}})));
       const quote=mk('button','btn btn-secondary','Request a quote');quote.type='button';quote.addEventListener('click',()=>openQuote(s.name));actions.append(chat,quote);
       content.append(kicker,h,p,ul,actions);
     };
@@ -110,7 +110,7 @@
         if(category!=='All' && p.category!==category)return;
         const b=mk('button','project-card reveal slide-up');b.type='button';b.setAttribute('aria-label',`Open ${p.title} project preview`);
         const image=mk('img','');image.src=safeImage(p.image);image.alt='';image.loading='lazy';image.width=600;image.height=400;if(p.position)image.style.objectPosition=p.position;
-        const overlay=mk('div','project-caption');overlay.append(mk('span','',p.category||'Project'),mk('strong','',p.title),mk('small','', 'View details ↗'));
+        const overlay=mk('div','project-caption');overlay.append(mk('span','',p.category||'Project'),mk('strong','',p.title),mk('small','', 'View details →'));
         b.append(image,overlay);b.addEventListener('click',()=>show(i));projectList.append(b);
       });
       const reveal=observer(el=>el.classList.add('visible'));projectList.querySelectorAll('.reveal').forEach(el=>{el.classList.add('ready');reveal.observe(el);});
@@ -184,7 +184,7 @@
     if(quoteStep===3){body.append(mk('h3','','Review your quotation request'));const summary=mk('dl','quote-summary');Object.entries(quote).forEach(([key,value])=>{summary.append(mk('dt','',key.charAt(0).toUpperCase()+key.slice(1)),mk('dd','',value||'Not specified'));});body.append(summary);const label=mk('label','quote-field');label.append(mk('span','','Prepared WhatsApp message'));const preview=mk('textarea','quote-input');preview.readOnly=true;preview.rows=7;preview.value=qFormat();label.append(preview);body.append(label);}
     const error=mk('p','quote-error');error.setAttribute('role','alert');const actions=mk('div','quote-actions');
     const back=mk('button','btn btn-secondary','← Back');back.type='button';back.disabled=quoteStep===0;back.addEventListener('click',()=>{quoteStep--;qRender();});actions.append(back);
-    const forward=mk('button','btn',quoteStep===3?'Open WhatsApp ↗':'Next →');forward.type='submit';forward.disabled=quoteStep===3&&!/^\d{8,15}$/.test(bNumber());actions.append(forward);
+    const forward=mk('button','btn',quoteStep===3?'Open WhatsApp →':'Next →');forward.type='submit';forward.disabled=quoteStep===3&&!/^\d{8,15}$/.test(bNumber());actions.append(forward);
     form.addEventListener('submit',e=>{e.preventDefault();
       if(quoteStep===3){const link=`https://wa.me/${bNumber()}?text=${encodeURIComponent(qFormat())}`;const a=mk('a','quote-direct-link','Continue to WhatsApp');a.href=link;a.target='_blank';a.rel='noopener noreferrer';body.querySelector('.quote-direct-link')?.remove();body.append(a);window.open(link,'_blank','noopener,noreferrer');error.textContent='WhatsApp opens with your message. You still need to press Send in WhatsApp.';return;}
       for(const key of keys){const field=form.elements.namedItem(key);if(!field)continue;const value=field.value.trim().replace(/[\u0000-\u001F\u007F]/g,' ');const problem=errorFor(key,value);if(problem){error.textContent=problem;field.focus();return;}quote[key]=value;}

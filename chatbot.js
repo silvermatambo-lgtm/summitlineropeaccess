@@ -89,7 +89,7 @@
     } else {
       const review=el('div','chat-review');[['Name',answers.name],['Phone',answers.phone],['Service',answers.service],['Location',answers.location],['Service details',answers.followup],['Notes',answers.message||'None']].forEach(([k,v])=>{const row=el('div','chat-review-line');row.append(el('strong','',k),el('span','',v));review.append(row);});
       const preview=el('textarea','chat-message-preview');preview.readOnly=true;preview.rows=6;preview.value=formatted();preview.setAttribute('aria-label','Preview of WhatsApp message');
-      controls.append(review,el('label','chat-preview-label','Prepared WhatsApp message'),preview,buttons(button('← Edit','subtle',back),button('Open WhatsApp ↗','primary',send,!/^\d{8,15}$/.test(phone))),buttons(button('Copy enquiry','secondary',copy),button('Start over','subtle',restart)));
+      controls.append(review,el('label','chat-preview-label','Prepared WhatsApp message'),preview,buttons(button('← Edit','subtle',back),button('Open WhatsApp →','primary',send,!/^\d{8,15}$/.test(phone))),buttons(button('Copy enquiry','secondary',copy),button('Start over','subtle',restart)));
       if(!/^\d{8,15}$/.test(phone))notice('Demo mode: WhatsApp destination is unconfigured. Copy enquiry works; sending is disabled.');
     }
     history.scrollTop=history.scrollHeight;
